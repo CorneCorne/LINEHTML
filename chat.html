@@ -1,0 +1,108 @@
+<html lang="ja">
+<head>
+  <meta charset="UTF-8"/>
+  <title>インタラクティブなLINE風チャット小説</title>
+  <link rel='stylesheet' href='style.css' type='text/css' media='all' />
+  <meta name="viewport" content="width=350" >
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+  <script type="text/javascript" src="file.js"></script>
+</head>
+<body>
+
+	<div class="all">
+		<!-- アカウント管理 -->
+		<div class="extention">
+			<!-- タイトル -->
+			<div class="title">
+				ユーザー管理
+			</div>
+
+			<div class="data_manager">
+				<button class="file_button save" type="button" onclick="save_data()">
+					save
+				</button>
+				<button class="file_button load" type="button" onclick="open_file()">
+					load
+				</button>
+			</div>
+
+
+
+			<!-- ユーザーリスト -->
+			<div class="user_list">
+				<!-- ユーザー -->
+				<button class="user" type="button" onclick="click_user(this)">
+					<div class="user_icon">
+						<img src="icon/シルエット.png" />
+					</div>
+					<div class="user_info">
+						<div class="user_name">
+							test
+						</div>
+						<div class="speaker_name">
+							テスト
+						</div>
+					</div>
+				</button>
+
+
+
+
+			</div>
+
+		</div>
+
+		<!-- ▼LINE風ここから -->
+		<div class="line__container">
+		<!-- タイトル -->
+		<div class="line__title">
+		  デフォルト
+		</div>
+
+		<!-- ▼会話エリア scrollを外すと高さ固定解除 -->
+		<div class="line__contents scroll" id="chat">
+
+		<!-- 自分の吹き出し -->
+		<div class="line__right">
+			<div class="text">犯人はこの中にいる！</div>
+			<span class="date">既読 2<br>0:30</span>
+			<a href="javascript:void(0);" onclick="delete_message(this)" class="delete">削除</a>
+		</div>
+
+
+		  <div class="line__center">
+			<span class="date">4.3(金)</span>
+		  </div>
+
+		  <!-- 相手の吹き出し -->
+		  <div class="line__left">
+			<figure>
+			  <img src="icon/さとり.png" />
+			</figure>
+			<div class="line__left-text">
+			  <div class="name">医者</div>
+			  <div class="text">私はやっていないぞ！</div>
+			  <span class="date">0:32</span>
+			</div>
+		  </div>
+
+
+
+		</div>
+		<!--　▲会話エリア ここまで -->
+
+		  <form action = "chat.html" method = "get">
+		  <div class="bms_send">
+		  <!-- <input type = "text" class="bms_send_message" name ="answer" onsubmit="send_message()"> -->
+		  <textarea type = "text" class="bms_send_message" name ="answer" onkeypress="if(event.shiftKey==true){if(event.keyCode==13){event.returnValue=false;send_message();}}"></textarea>
+		  <input type = "reset" value ="送信" class="bms_send_btn" onclick="send_message();">
+		  </div>
+		  </form>
+
+		</div>
+		<!--　▲LINE風ここまで -->
+	</div>
+
+</body>
+
+</html>

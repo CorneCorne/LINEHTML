@@ -1,0 +1,462 @@
+body {
+	/*padding: 1em 0; */
+	background-color: #000000;
+	margin:0px;
+}
+
+.all {
+	text-align: center;
+}
+
+.extention {
+	padding:0;
+	background: #cccccc;
+	width: 300px;
+	height:99%;
+	font-size: 80%;
+	display: inline-block;
+
+	/* float: left; */
+}
+
+/* タイトル部分 */
+.extention .title {
+	background: #273246;
+	padding: 10px;
+	text-align: center;
+	font-size: 150%;
+	color: #ffffff;
+
+}
+
+/* データ管理 */
+.extention .data_manager {
+	padding: 10px;
+	width:100%-20px;
+	height:52px;
+
+}
+
+/* ファイル管理ボタン */
+.extention .data_manager .file_button {
+	width:130px;
+	height:52px;
+	border-radius: 10px;
+	display: inline-block;
+	font-size: 150%;
+	opacity: 0.8;
+	transition: transform 0.1s;
+}
+
+.extention .data_manager .file_button:hover {
+	transform: scale(1.1);
+	opacity: 1;
+}
+
+.extention .data_manager .save{
+	background: #00ffa0;
+}
+
+.extention .data_manager .load{
+	background: #00a00a;
+}
+
+
+/* ユーザーリストの部分 */
+.extention .user_list {
+	width: 100%;
+	height: 80%;
+	overflow-y: scroll;
+}
+
+/* スクロールの幅の設定 */
+.extention .user_list::-webkit-scrollbar {
+	width: 7px;
+	height: 7px;
+	display: none;
+}
+
+/* ユーザー1人分 */
+.extention .user_list .user {
+	padding:0;
+	height: 72px;
+	width: 100%;
+	text-align: left;
+	background: #dddddd;
+	border-radius: 10px;
+	opacity: 0.9;
+}
+
+.extention .user_list .user:hover {
+	height: 90px;
+	width: 100%;
+	background: #ffffff;
+	opacity: 1;
+}
+
+
+.extention .user_list .user .user_icon {
+	text-align: left;
+	height: 68px;
+	width: 80px;
+	display: inline-block;
+	/* background: #ffffff; */
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+	vertical-align: top;
+}
+
+.extention .user_list .user .user_icon img {
+	max-height: 100%;
+	transition: transform 0.6s;
+}
+
+.user:hover > .user_icon {
+	transform: scale(1.1)
+}
+
+.user:hover > .user_icon img {
+	transform: scale(1.1)
+}
+
+
+.extention .user_list .user .user_info {
+	height: 100%;
+	display: inline-block;
+	vertical-align: top;
+	transition: font 0.3s ease;
+}
+
+.user:hover > .user_info {
+	font-size: 120%;
+}
+
+
+.extention .user_list .user .user_info .user_name {
+	text-align: left;
+	font-size: 130%;
+	display: block;
+}
+
+.extention .user_list .user .user_info .speaker_name {
+	text-align: left;
+	font-size: 150%;
+	display: block;
+}
+
+.line__container {
+	padding:0;
+	background: #7494c0;
+	overflow: hidden;
+	width: 400px;
+	height :99%;
+	/* margin: -10px auto;*/
+	font-size: 80%;
+	display: inline-block;
+	/* float: left; */
+	vertical-align: top;
+}
+
+/* タイトル部分 */
+.line__container .line__title {
+	background: #273246;
+	height:4%;
+	padding: 10px;
+	text-align: center;
+	font-size: 150%;
+	color: #ffffff;
+}
+
+/* 会話部分 */
+.line__container .line__contents {
+	padding: 10px;
+	overflow: hidden;
+	line-height: 135%;
+}
+
+.line__container .scroll {
+	height: 76%;
+	overflow-y: visible;
+	/* white-space: nowrap; */
+}
+
+/* 会話部分のスクロール */
+
+/* スクロールの幅の設定 */
+.line__container .scroll::-webkit-scrollbar {
+	width: 7px;
+	height: 7px;
+	/* display: none; */
+}
+
+
+/* スクロールの背景の設定 */
+.line__container .scroll::-webkit-scrollbar-track {
+	border-radius: 5px;
+	box-shadow: 0 0 4px #aaa inset;
+}
+
+/* スクロールのつまみ部分の設定 */
+.line__container .scroll::-webkit-scrollbar-thumb {
+	border-radius: 5px;
+	background: #1959A8;
+}
+
+/* スタンプ画像最大幅 */
+.line__container .line__left .stamp img{
+	max-width:120px;
+	margin: 30px 15px 5px 60px;
+}
+
+/* 相手の会話 */
+.line__container .line__left {
+
+	position: relative;
+	display: block;
+	margin: 5px 0;
+	max-width: 80%;
+	float: left;
+	margin-right: 15px;
+	clear: both;
+}
+
+/* アイコン画像 */
+.line__container .line__left figure {
+		width: 50px;
+		position: absolute;
+		top: 15px;
+		left: 0;
+		padding: 0;
+		margin: 0;
+
+}
+
+/* 正方形を用意 */
+.line__container .line__left figure img{
+		border-radius: 50%;
+		width: 50px;
+		height: 50px;
+}
+
+.line__container .line__left .line__left-text {
+	margin-left: 70px;
+	padding: 10px 0 0 0;
+}
+
+.line__container .line__left .line__left-text .name {
+	text-align: left;
+	font-size: 80%;
+	color: #ffffff;
+}
+
+/* コメントエリア */
+.line__container .line__left .text {
+	text-align: left;
+	margin: 0;
+	position: relative;
+	padding: 10px;
+	border-radius: 20px;
+	background-color: #ffffff;
+}
+
+/* 吹き出し */
+.line__container .line__left .text::after {
+	content: '';
+	position: absolute;
+	display: block;
+	width: 0;
+	height: 0;
+	left: -10px;
+	top: 10px;
+	border-right: 20px solid #ffffff;
+	border-top: 10px solid transparent;
+	border-bottom: 10px solid transparent;
+}
+
+/* 相手の時間エリア */
+.line__container .line__left .date {
+	content: '';
+	position: absolute;
+	display: block;
+	width: 100px;
+	text-align: right;
+	right: -30px;
+	bottom: 0px;
+	font-size: 80%;
+	color: #ffffff;
+}
+
+/* 自分の会話 */
+.line__container .line__right {
+
+	position: relative;
+	display: block;
+	margin: 5px 0;
+	max-width: 75%;
+	float: right;
+	margin-right: 15px;
+	clear: both;
+}
+
+/* コメントエリア */
+.line__container .line__right .text {
+	text-align: left;
+	padding: 10px;
+	border-radius: 20px;
+	background-color: #8de055;
+	margin: 0;
+	margin-left: 80px;
+}
+
+.text{
+	word-wrap: break-all;
+}
+
+
+
+/* 吹き出し */
+.line__container .line__right .text::after {
+	content: '';
+	position: absolute;
+	display: block;
+	width: 0;
+	height: 0;
+	right: -10px;
+	top: 10px;
+	border-left: 20px solid #8de055;
+	border-top: 10px solid transparent;
+	border-bottom: 10px solid transparent;
+}
+
+/* 自分がスタンプを送る時 */
+.line__container .line__right .stamp {
+	position: relative;
+	margin-left: 80px;
+}
+
+/* 自分がスタンプを送る時 */
+.line__container .line__right .stamp img{
+	max-width: 100px;
+}
+
+/* 自分の既読エリア */
+.line__container .line__right .date {
+	content: '';
+	position: absolute;
+	display: block;
+	width: 100px;
+	text-align: right;
+	left: -30px;
+	bottom: 0px;
+	font-size: 80%;
+	color: #ffffff;
+}
+
+/* 日付 */
+.line__container .line__center {
+	position: relative;
+	display: block;
+	margin: 5px 0;
+	max-width: 80%;
+	float: left;
+	margin-right: 15px;
+	clear: both;
+}
+/* コメント */
+.line__container .line__center .date {
+	content: '';
+	position: relative;
+	border-radius: 10px;
+	display: block;
+	width: 100px;
+	text-align: center;
+	right: -130px;
+	font-size: 80%;
+	color: #ffffff;
+	background-color:rgba(0,0,0,0.3);
+}
+
+/* 削除関係 */
+
+.line__container .line__left a{
+	text-align: left;
+	display: none;
+}
+
+.line__container .line__right a{
+	text-align: right;
+	display: none;
+}
+
+.line__container .line__center a{
+	text-align: center;
+	display: none;
+}
+
+
+.line__bms {
+	height: 10%;
+}
+
+
+/* テキストエリア、送信ボタン */
+.bms_send {
+		background-color:#eee;
+		border-right: 1px solid #ddd;
+		border-left: 1px solid #ddd;
+		border-bottom: 0px solid #ddd;
+		height: 13%;
+		padding: 5px;
+		max-width: 400px;
+		margin: 5px auto -3px;
+}
+.bms_send_message{
+		width: calc(100% - 75px);/*常に送信ボタンの横幅を引いたサイズに動的に計算*/
+		line-height: 16px;
+		height: 95%;
+		padding: 14px 6px 0px 6px;/*文字がテキストエリアの中心になる様に隙間調整*/
+		border: 1px solid #ccc;
+		border-radius: 4px;/*角丸*/
+		text-align: left;/*文字を左寄せ*/
+		box-shadow: 2px 2px 4px 0px rgba(0,0,0,0.2) inset;/*内側に影を入れてテキストエリアらしくした*/
+		box-sizing: border-box;/*paddingとborderの要素の高さと幅の影響をなくす（要素に高さと幅を含める）*/
+		font-size: 16px;
+}
+.bms_send_btn {
+		width: 72px;
+		height: 90%;
+		font-size: 17px;
+		line-height: 3em;
+		float: right;/*bms_sendに対して右寄せ*/
+		color: #fff;
+		font-weight: bold;
+		background: #bcbcbc;
+		text-align: center;/*文字をボタン中央に表示*/
+		border: 1px solid #bbb;
+		border-radius: 4px;/*角丸*/
+		box-sizing: border-box;/*paddingとborderの要素の高さと幅の影響をなくす（要素に高さと幅を含める）*/
+		text-decoration:none;
+}
+.bms_send_btn:hover {
+		background: #13178E; /*マウスポインタを当てた時にアクティブな色になる*/
+		cursor: pointer;/*マウスポインタを当てた時に、カーソルが指の形になる*/
+}
+
+.button {
+	width: 70px;
+	height: 48px;
+	border-radius : 5%;          /* 角丸       */
+	font-size     : 15pt;        /* 文字サイズ */
+	text-align    : center;      /* 文字位置   */
+	cursor        : pointer;     /* カーソル   */
+	font-weight: bold;
+	padding       : 12px 10px;   /* 余白       */
+	background    : #bcbcbc;     /* 背景色     */
+	color         : #ffffff;     /* 文字色     */
+	line-height   : 1.5em;         /* 1行の高さ  */
+	transition    : .3s;         /* なめらか変化 */
+	border: 1px solid #bbb;
+}
+.button:hover {
+	background    : #13178E;     /* 文字色     */
+}
