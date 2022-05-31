@@ -264,6 +264,8 @@ send_message = function(){
 						+"set_title title タイトルを設定します\n"
 						+"clear_all 全メッセージを削除します\n"
 						+"reg_user speaker_name;;;speaker_picture_name ユーザーを登録します\n"
+						+"change_user speaker_name ユーザーを変更します。\n"
+						+"center text 中央に文字を追加します。\n"
 						+"\n";
 		help_message = help_message.replace(/\n/g, '<br>');
 		display_message(true,0,0,help_message);
