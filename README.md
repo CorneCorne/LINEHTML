@@ -1,5 +1,6 @@
 # LINE風チャット小説作成アプリ
 
+2020/5/10ぐらいに作ったアプリです。
 
 参考サイト:https://qiita.com/uji_keyaki/items/87dd26c178ed8a18d267
 
